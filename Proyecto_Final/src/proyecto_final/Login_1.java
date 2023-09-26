@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 public class Login_1 extends JFrame {
 
@@ -28,8 +29,8 @@ public class Login_1 extends JFrame {
 
         this.setVisible(true);//activar visibilidad de la ventana
 
-       this.setDefaultCloseOperation(EXIT_ON_CLOSE);//cerrar ventana
-
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);//cerrar ventana
+       
         Componentes();//llamar iniciar componentes
 
         misUsuarios[0] = new Usuario("ADMIN", "2390"); //Usuario ya creado
@@ -45,7 +46,7 @@ public class Login_1 extends JFrame {
         etiquetas(); //Todas las Etiquetas
 
         botones();
-
+        
     }
 
     public void iniciarComponentes() {
@@ -72,7 +73,7 @@ public class Login_1 extends JFrame {
     public void etiquetas() {
 
         JLabel Usuario = new JLabel("Ingrese El Usuario");
-        Usuario.setBounds(35, 152, 340, 20);
+        Usuario.setBounds(35, 152, 350, 20);
         Usuario.setForeground(Color.WHITE);
         log_1.add(Usuario);
 
@@ -116,7 +117,7 @@ public class Login_1 extends JFrame {
 
         btniniciar.addActionListener(ini);
 
-        JButton btsregistra = new JButton("Registrarse");
+        JButton btsregistra = new JButton("Nuevo Usuario");
         btsregistra.setBounds(250, 290, 150, 30);
         btsregistra.setBackground(Color.BLUE);
         btsregistra.setForeground(Color.WHITE);
@@ -129,9 +130,10 @@ public class Login_1 extends JFrame {
 
                 Login_2 inicial = new Login_2();
 
-                inicial.setBounds(510, 160, 550, 500);
-
+                inicial.setBounds(490, 140, 550, 500);
+                
                 inicial.setTitle("Login_2");
+                
             }
 
         };
@@ -147,7 +149,7 @@ public class Login_1 extends JFrame {
 
             if (misUsuarios[i] != null) {
 
-                if (misUsuarios[i].getNombre().equals(usuario) && misUsuarios[i].getContra().equals(contra)) {
+                if (misUsuarios[i].getNombre_Usuario().equals(usuario) && misUsuarios[i].getContra().equals(contra)) {
 
                     encontrado = true;
 
