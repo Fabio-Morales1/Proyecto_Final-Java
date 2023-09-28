@@ -16,13 +16,13 @@ import javax.swing.JTextField;
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 public class Login_1 extends JFrame {
-
+public  Usuario misUsuarios[] = new Usuario[11];
     JPanel log_1 = new JPanel();//crear panel
 
     JTextField txtValor1 = new JTextField();
     JPasswordField txtValor2 = new JPasswordField();
 
-    Usuario misUsuarios[] = new Usuario[11];
+   
 
     // Metodo constructor para la ventana
     public Login_1() {
