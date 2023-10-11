@@ -20,6 +20,7 @@ public class Clientes {
     public void setNit(String Nit) {
         this.Nit = Nit;
     }
+    
 
     public String getNombre() {
         return Nombre;
@@ -45,5 +46,9 @@ public class Clientes {
         this.Genero = Genero;
     }
 
+    
+    
+    
+    
     
 }
